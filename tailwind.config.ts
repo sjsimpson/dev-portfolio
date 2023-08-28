@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+      transitionProperty: {
+        translate: "translate",
+      },
       colors: {
         primary: "#FF704E",
       },
