@@ -17,13 +17,9 @@ export default function Role(props: RoleProps) {
   return (
     <div className={`${roboto.className} role flex flex-col mb-20`}>
       <div className="role-header flex flex-col mb-4">
-        <div className="role-description flex items-baseline text-xl cursor-default">
-          {`${props.title} at `}
-          <a
-            href={props.website}
-            className="job-link ml-4 mr-2"
-            target="_blank"
-          >
+        <div className="role-description flex flex-col sm:flex-row items-baseline text-xl cursor-default">
+          <span>{`${props.title} at `}</span>
+          <a href={props.website} className="job-link sm:ml-4" target="_blank">
             <span className="font-semibold after:block after:content-[''] after:relative after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:w-0 after:duration-200 hover:after:w-full dark:after:bg-white">
               {props.company}
             </span>

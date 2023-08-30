@@ -5,8 +5,8 @@ import FooterButton from "./footer-button";
 export default function Footer() {
   return (
     <div className="flex flex-col place-items-center align-middle h-60 w-full mt-40 border-t border-t-black dark:border-t-white">
-      <div className="flex flex-auto mt-20">
-        <div className="flex flex-row">
+      <div className="flex flex-auto mt-10 sm:mt-20">
+        <div className="flex flex-col gap-4 sm:flex-row">
           <FooterButton
             href="https://www.linkedin.com/in/spencerjsimpson/"
             src="/linkedin.svg"

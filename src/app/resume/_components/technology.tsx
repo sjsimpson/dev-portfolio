@@ -6,37 +6,51 @@ import { ChevronDown } from "react-feather";
 export default function Technology({
   active,
   tech,
-  updateUnderline,
+  updateOffset,
+  updateWidth,
   onClick,
+  size = 48,
+  useHoverIndicator = false,
 }: {
   active: boolean;
   tech: Technology;
-  updateUnderline: (width: number, offset: number) => void;
-  onClick: MouseEventHandler;
+  updateOffset?: (offset: number) => void;
+  updateWidth?: (width: number) => void;
+  onClick?: MouseEventHandler;
+  size?: number;
+  useHoverIndicator?: boolean;
 }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (active && containerRef.current) {
-      const offset = containerRef.current.offsetLeft;
-      const width = containerRef.current.offsetWidth;
-      updateUnderline(width, offset);
+      if (updateOffset) {
+        const offset = containerRef.current.offsetLeft;
+        updateOffset(offset);
+      }
+
+      if (updateWidth) {
+        const width = containerRef.current.offsetWidth;
+        updateWidth(width);
+      }
     }
-  }, [active, updateUnderline]);
+  }, [active, updateOffset, updateWidth]);
 
   return (
     <div
       ref={containerRef}
-      className="tech-item group relative flex flex-row px-3 py-3 items-center  cursor-pointer z-10"
+      className="tech-item group relative flex flex-row px-3 py-3 items-center cursor-pointer z-10 shrink-0"
       onClick={onClick}
     >
-      <ChevronDown className="absolute -top-7 left-[26px] invisible transition-all duration-100 group-hover:visible group-hover:-top-5 z-20" />
+      {useHoverIndicator && (
+        <ChevronDown className="absolute -top-7 left-[26px] invisible transition-all duration-100 group-hover:visible group-hover:-top-5 z-20" />
+      )}
       <Image
         className="dark:invert select-none pointer-events-none"
         src={tech.icon}
         alt={tech.alt}
-        width={48}
-        height={48}
+        width={size}
+        height={size}
         priority
       />
     </div>

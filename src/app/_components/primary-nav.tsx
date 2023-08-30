@@ -29,9 +29,7 @@ export default function PrimaryNav() {
   };
 
   return (
-    <div
-      className={`fixed inline-flex justify-between w-full h-20 px-24 z-100 text-black dark:text-white`}
-    >
+    <div className="fixed inline-flex justify-between min-w-full h-20 px-24 z-100 text-black dark:text-white">
       <div className="flex flex-row">
         <div className="h-20 w-16 bg-primary" />
         <div
@@ -50,7 +48,7 @@ export default function PrimaryNav() {
       <div className="flex flex-col justify-end">
         <div className="relative flex">
           <div
-            className={`absolute flex w-24 h-full border border-solid border-black dark:border-white transition-all ease-out duration-200 pointer-events-none`}
+            className="absolute flex w-24 h-full border border-solid border-black dark:border-white transition-all ease-out duration-200 pointer-events-none"
             style={position}
           />
           {links.map((link) => (
