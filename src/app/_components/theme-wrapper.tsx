@@ -12,7 +12,7 @@ export default function ThemeWrapper({
 
   return (
     <div className={theme}>
-      <div className=" text-black transition-all dark:text-white bg-gradient-to-b from-gray-200 to-white dark:from-gray-900 dark:to-gray-900">
+      <div className=" text-black transition-all dark:text-white bg-gray-200 dark:bg-night">
         {children}
       </div>
     </div>
