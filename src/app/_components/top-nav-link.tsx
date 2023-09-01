@@ -5,19 +5,20 @@ import { Roboto_Mono } from "next/font/google";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
-interface LinkProps {
+export default function TopNavLink({
+  name,
+  href,
+}: {
   name: string;
   href: string;
-}
-
-export default function NavLink(props: LinkProps) {
+}) {
   return (
     <div className="flex justify-center w-24 cursor-pointer hover:font-semibold">
       <Link
         className="flex justify-center py-2 px-4 w-24 select-none"
-        href={props.href}
+        href={href}
       >
-        <span className={roboto.className}>{props.name.toUpperCase()}</span>
+        <span className={roboto.className}>{name.toUpperCase()}</span>
       </Link>
     </div>
   );

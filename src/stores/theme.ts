@@ -3,16 +3,16 @@ import { persist } from "zustand/middleware";
 
 interface ThemeState {
   theme: "dark" | "light";
-  toggleTheme: () => void;
+  toggleTheme: (theme: ThemeState["theme"]) => void;
 }
 
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
       theme: "light",
-      toggleTheme: () =>
+      toggleTheme: (theme: ThemeState["theme"]) =>
         set({
-          theme: get().theme === "light" ? "dark" : "light",
+          theme,
         }),
     }),
     {

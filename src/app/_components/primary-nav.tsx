@@ -1,61 +1,39 @@
 "use client";
 
-import NavLink from "./nav-link";
-import { usePathname } from "next/navigation";
-import { useMemo } from "react";
-import { links } from "@/constants/nav-links";
-import { selectors, useThemeStore } from "@/stores/theme";
+import { useMemo, useRef, useState } from "react";
+import ThemeToggle from "./theme-toggle";
+import { ChevronLeft, Menu } from "react-feather";
+import TopNav from "./top-nav";
+import SideNav from "./side-nav";
+import useMediaQuery, { breakpoints } from "@/lib/useMediaQuery";
 
 export default function PrimaryNav() {
-  const toggleTheme = useThemeStore(selectors.toggleTheme);
-
-  const pathname = usePathname();
-
-  const position = useMemo(() => {
-    const rootPath = pathname.split("/")[1];
-    const index = links.findIndex(
-      (link) => link.href.slice(1, link.href.length) === rootPath,
-    );
-
-    if (index !== -1) {
-      return { left: `${96 * index}px` };
-    }
-
-    return { left: "0px" };
-  }, [pathname]);
-
-  const handleToggleTheme = () => {
-    toggleTheme();
-  };
+  const [open, setOpen] = useState(false);
+  const md = useMediaQuery(breakpoints.md);
 
   return (
-    <div className="fixed inline-flex justify-between min-w-full h-20 px-24 z-100 text-black dark:text-white">
-      <div className="flex flex-row">
-        <div className="h-20 w-16 bg-primary" />
-        <div
-          className="p-4 hover:bg-red-300 cursor-pointer"
-          onClick={handleToggleTheme}
-        >
-          LIGHT
+    <>
+      <div className="fixed inline-flex justify-between min-w-full h-24 px-10 md:px-16 lg:px-24 pb-4 z-10 text-black dark:text-white bg-gray-200 dark:bg-night">
+        <div className="flex flex-row gap-8">
+          {!md && (
+            <div className="flex flex-col justify-end">
+              <div
+                className="h-10 w-10 p-2 cursor-pointer"
+                onClick={() => setOpen(true)}
+              >
+                <Menu />
+              </div>
+            </div>
+          )}
+          <div className="flex flex-col justify-end">
+            <div className="h-20 w-20 text-center">LOGO</div>
+          </div>
+          {md && <ThemeToggle />}
         </div>
-        <div
-          className="p-4 hover:bg-red-300 cursor-pointer"
-          onClick={handleToggleTheme}
-        >
-          DARK
-        </div>
+        {md && <TopNav />}
       </div>
-      <div className="flex flex-col justify-end">
-        <div className="relative flex">
-          <div
-            className="absolute flex w-24 h-full border border-solid border-black dark:border-white transition-all ease-out duration-200 pointer-events-none"
-            style={position}
-          />
-          {links.map((link) => (
-            <NavLink key={link.href} href={link.href} name={link.name} />
-          ))}
-        </div>
-      </div>
-    </div>
+
+      {!md && <SideNav open={open} setOpen={setOpen} />}
+    </>
   );
 }

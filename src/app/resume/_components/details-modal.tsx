@@ -2,7 +2,7 @@ import { X } from "react-feather";
 import Image from "next/image";
 import { Roboto_Mono } from "next/font/google";
 import { useEffect } from "react";
-import Button from "@/ui/button";
+import Button from "../../_ui/button";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
@@ -49,9 +49,7 @@ export default function DetailsModal({
         </div>
         <div className={`content ${roboto.className}`}>{tech.description}</div>
       </div>
-      <Button className="flex self-end" onClick={onClose}>
-        Close
-      </Button>
+      <Button onClick={onClose}>Close</Button>
     </div>
   );
 }

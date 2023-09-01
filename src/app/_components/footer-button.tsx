@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/ui/button";
+import Button from "../_ui/button";
 
 export default function FooterButton({
   href,
