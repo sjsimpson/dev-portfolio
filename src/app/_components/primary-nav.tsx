@@ -1,12 +1,13 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useState } from "react";
 import ThemeToggle from "./theme-toggle";
-import { ChevronLeft, Menu } from "react-feather";
+import { Menu } from "react-feather";
 import TopNav from "./top-nav";
 import SideNav from "./side-nav";
 import useMediaQuery, { breakpoints } from "@/lib/useMediaQuery";
 import { Roboto_Mono } from "next/font/google";
+import Link from "next/link";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
@@ -29,11 +30,13 @@ export default function PrimaryNav() {
             </div>
           )}
           <div className="flex flex-col justify-center">
-            <div
-              className={`${roboto.className} px-4 py-2 text-3xl text-center border border-black dark:border-white`}
-            >
-              {"sjs.dev"}
-            </div>
+            <Link href="/">
+              <div
+                className={`${roboto.className} px-4 py-2 text-3xl text-center border border-black dark:border-white`}
+              >
+                {"sjs.dev"}
+              </div>
+            </Link>
           </div>
           {md && <ThemeToggle />}
         </div>
