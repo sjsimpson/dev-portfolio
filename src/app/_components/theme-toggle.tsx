@@ -47,7 +47,7 @@ export default function ThemeToggle() {
   };
 
   return (
-    <div className="flex flex-col justify-end">
+    <div className="flex flex-col justify-center">
       <div className="relative flex flex-row items-center h-10 gap-5">
         <div
           ref={sunRef}

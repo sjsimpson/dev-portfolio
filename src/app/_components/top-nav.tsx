@@ -20,7 +20,7 @@ export default function TopNav() {
   }, [pathname]);
 
   return (
-    <div className="flex flex-col justify-end">
+    <div className="flex flex-col justify-center">
       <div className="relative flex">
         <div
           className="absolute flex w-24 h-full border border-solid border-black dark:border-white transition-all ease-out duration-200 pointer-events-none"

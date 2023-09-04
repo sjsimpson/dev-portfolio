@@ -1,12 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Mono } from "next/font/google";
 import Content from "./_components/content";
 import Footer from "./_components/footer";
 import PrimaryNav from "./_components/primary-nav";
 import ThemeWrapper from "./_components/theme-wrapper";
 
 const inter = Inter({ subsets: ["latin"] });
+const roboto_mono = Roboto_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`overflow-y-scroll ${inter.className}`}>
+      <body className={`overflow-y-scroll ${roboto_mono.className}`}>
         <ThemeWrapper>
           <PrimaryNav />
           <Content>{children}</Content>
