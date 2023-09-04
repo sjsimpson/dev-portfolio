@@ -1,9 +1,20 @@
 import Image from "next/image";
 import Typewriter from "./_components/typewriter";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center gap-10 w-4/5 lg:w-[800px]">
-      <Typewriter />
+      <div className="flex flex-col gap-8 font-light text-3xl">
+        <div>
+          Hello! <span className="animate-bounce">👋</span> My name is{" "}
+          <span className="font-bold border-b border-b-black dark:border-b-white">
+            Spencer Simpson
+          </span>
+        </div>
+        <div className="h-20 md:h-fit">
+          I am a <Typewriter />
+        </div>
+      </div>
       <div className="flex flex-col lg:flex-row w-full items-center lg:justify-center gap-10">
         <div className="flex flex-col lg:w-2/3 font-light text-lg gap-8">
           <p>
