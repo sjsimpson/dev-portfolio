@@ -1,6 +1,15 @@
 import Image from "next/image";
 import Typewriter from "./_components/typewriter";
 
+const hats = [
+  "Software Developer",
+  "Father",
+  "Magic: The Gathering Player",
+  "Psych Enjoyer",
+  "Home Remodeler",
+  "Colemak Enthusiast",
+];
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center gap-10 w-4/5 lg:w-[800px]">
@@ -12,7 +21,7 @@ export default function Home() {
           </span>
         </div>
         <div className="h-20 md:h-fit">
-          I am a <Typewriter />
+          I am a <Typewriter prompts={hats} />
         </div>
       </div>
       <div className="flex flex-col lg:flex-row w-full items-center lg:justify-center gap-10">
