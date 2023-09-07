@@ -62,7 +62,7 @@ export default function Projects() {
             </p>
             <p>
               Just like everything else, it&apos;s on my Github. So feel free to
-              fork it and use at your leasure! Just please give me credit.
+              fork it and use at your leisure! Just please give me credit.
             </p>
           </>
         }
