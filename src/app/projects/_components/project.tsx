@@ -34,6 +34,7 @@ export default function Project({
                 className="relative flex flex-row py-2 gap-2 transition-transform duration-100 after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:min-w-0 after:transition-[min-width] after:duration-200 hover:after:min-w-full dark:after:bg-white"
               >
                 <Image
+                  className="dark:invert"
                   src={"/globe.png"}
                   alt={`Go to ${name}'s website`}
                   height={24}
@@ -48,6 +49,7 @@ export default function Project({
                 className="relative flex flex-row py-2 gap-2 transition-transform duration-100 after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:min-w-0 after:transition-[min-width] after:duration-200 hover:after:min-w-full dark:after:bg-white"
               >
                 <Image
+                  className="dark:invert"
                   src={"/npm.svg"}
                   alt={`Go to ${name}'s npm repository`}
                   height={24}
@@ -62,6 +64,7 @@ export default function Project({
                 className="relative flex flex-row py-2 gap-2 transition-transform duration-100 after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:min-w-0 after:transition-[min-width] after:duration-100 hover:after:min-w-full dark:after:bg-white"
               >
                 <Image
+                  className="dark:invert"
                   src={"/github.svg"}
                   alt={`Go to ${name}'s Github`}
                   height={24}

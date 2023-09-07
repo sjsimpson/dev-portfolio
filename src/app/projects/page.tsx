@@ -36,15 +36,15 @@ export default function Projects() {
           <>
             <p className="mb-6">
               M3 React started because I wanted to create an easy solution for
-              implementing React components styled after Google Material 3.
+              implementing React components styled after Google Material 3 spec.
               Publishing and maintaining open-source software has always been a
               goal of mine, and this project was my first steps toward it.
             </p>
             <p>
               It has grown and improved as I&apos;ve used those components
               across various other projects. I hope to continue to add new
-              components and improve those as they are available. Feel free to
-              add it to your own project to get aquyce start with styling.
+              components and improve existing ones. Feel free to add it to your
+              own project to get quick start with styling.
             </p>
           </>
         }
@@ -56,16 +56,13 @@ export default function Projects() {
         description={
           <>
             <p className="mb-6">
-              M3 React started because I wanted to create an easy solution for
-              implementing React components styled after Google Material 3.
-              Publishing and maintaining open-source software has always been a
-              goal of mine, and this project was my first steps toward it.
+              My previous portfolio website. It also leverages M3 React
+              components and was built from scratch. I really liked it at the
+              time, but quickly found it to be outdated, so I created a new one.
             </p>
             <p>
-              It has grown and improved as I&apos;ve used those components
-              across various other projects. I hope to continue to add new
-              components and improve those as they are available. Feel free to
-              add it to your own project to get aquyce start with styling.
+              Just like everything else, it&apos;s on my Github. So feel free to
+              fork it and use at your leasure! Just please give me credit.
             </p>
           </>
         }
