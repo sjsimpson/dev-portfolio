@@ -31,6 +31,7 @@ export default function Project({
             {url && (
               <a
                 href={url}
+                target="_blank"
                 className="relative flex flex-row py-2 gap-2 transition-transform duration-100 after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:min-w-0 after:transition-[min-width] after:duration-200 hover:after:min-w-full dark:after:bg-white"
               >
                 <Image
@@ -46,6 +47,7 @@ export default function Project({
             {npm && (
               <a
                 href={url}
+                target="_blank"
                 className="relative flex flex-row py-2 gap-2 transition-transform duration-100 after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:min-w-0 after:transition-[min-width] after:duration-200 hover:after:min-w-full dark:after:bg-white"
               >
                 <Image
@@ -61,6 +63,7 @@ export default function Project({
             {github && (
               <a
                 href={github}
+                target="_blank"
                 className="relative flex flex-row py-2 gap-2 transition-transform duration-100 after:block after:content-[''] after:absolute after:bottom-0 after:left-0 after:bg-black after:h-0.5 after:min-w-0 after:transition-[min-width] after:duration-100 hover:after:min-w-full dark:after:bg-white"
               >
                 <Image
