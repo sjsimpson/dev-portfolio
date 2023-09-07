@@ -8,8 +8,8 @@ export default function Projects() {
       <Project
         name="Nacho Stocks"
         image={{ src: "/nachostocks.png", alt: "Nacho Stocks" }}
-        url="test"
-        github="test"
+        url="https://nachostocks.com/"
+        github="https://github.com/sjsimpson/nacho-stocks"
         description={
           <>
             <p className="mb-6">
@@ -30,8 +30,8 @@ export default function Projects() {
       <Project
         name="M3 React"
         image={{ src: "/m3-react.png", alt: "M3 React" }}
-        github="link to github"
-        npm="link to npm"
+        github="https://github.com/sjsimpson/m3-react"
+        npm="https://www.npmjs.com/package/m3-react"
         description={
           <>
             <p className="mb-6">
