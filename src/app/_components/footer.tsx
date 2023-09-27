@@ -1,8 +1,8 @@
 "use client";
 
-import { Roboto_Flex } from "next/font/google";
+// import { Roboto_Flex } from "next/font/google";
 import FooterButton from "./footer-button";
-const roboto = Roboto_Flex({ subsets: ["latin"] });
+// const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 export default function Footer() {
   return (
@@ -21,12 +21,11 @@ export default function Footer() {
           />
         </div>
       </div>
-      <div className={`${roboto.className} justify-self-end text-xs mb-4`}>
-        <div>
-          This Website was originally created by me, Spencer Simpson, using
-          React, TailwindCSS, and Next.js
-        </div>
-      </div>
+      {/*<div className={`${roboto.className} justify-self-end text-xs mb-4`}> */}
+      {/*<div className="justify-self-end text-xs mb-4">
+        This Website was originally created by me, Spencer Simpson, using React,
+        TailwindCSS, and Next.js
+      </div>*/}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export default function SideNav({
   return (
     <>
       <div
-        className="fixed flex flex-col justify-between h-screen w-80 p-10 bg-gray-200 dark:bg-night transition-[left] duration-100 ease-out z-50"
+        className="fixed flex flex-col justify-between h-screen w-80 p-10 pb-24 bg-gray-200 dark:bg-night transition-[left] duration-100 ease-out z-50"
         style={{ left: offset }}
       >
         <div className="flex flex-col gap-10">
