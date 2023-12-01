@@ -20,7 +20,7 @@ export default function Projects() {
             </p>
             <p>
               This project is still in progress, and I will be continuing to add
-              functionality to it. For now, it contunues to serve as a great
+              functionality to it. For now, it continues to serve as a great
               vehicle for improving my React skills and working on the M3 React
               npm library.
             </p>
@@ -36,9 +36,10 @@ export default function Projects() {
           <>
             <p className="mb-6">
               M3 React started because I wanted to create an easy solution for
-              implementing React components styled after Google Material 3 spec.
-              Publishing and maintaining open-source software has always been a
-              goal of mine, and this project was my first steps toward it.
+              implementing React components styled after the Google Material 3
+              spec. Publishing and maintaining open-source software has always
+              been a goal of mine, and this project was my first steps toward
+              it.
             </p>
             <p>
               It has grown and improved as I&apos;ve used those components
