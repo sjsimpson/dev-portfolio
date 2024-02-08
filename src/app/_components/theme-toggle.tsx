@@ -34,14 +34,12 @@ export default function ThemeToggle() {
     if (theme === "dark") handleChangeDark();
   }, [theme, handleChangeLight, handleChangeDark]);
 
-  const onSunClick = (e: any) => {
-    e.preventDefault();
+  const onSunClick = () => {
     handleChangeLight();
     toggleTheme("light");
   };
 
-  const onMoonClick = (e: any) => {
-    e.preventDefault();
+  const onMoonClick = () => {
     handleChangeDark();
     toggleTheme("dark");
   };

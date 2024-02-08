@@ -4,7 +4,7 @@ import { technologies } from "@/constants/technologies";
 import Technology from "./technology";
 import { useEffect, useState } from "react";
 import { Roboto_Mono } from "next/font/google";
-import { ChevronLeft, ChevronRight, X } from "react-feather";
+import { ChevronLeft, ChevronRight } from "react-feather";
 import useMediaQuery, { breakpoints } from "@/lib/useMediaQuery";
 import Image from "next/image";
 import Button from "../../_ui/button";
@@ -25,15 +25,13 @@ export default function Technologies() {
     sm && setOpen(false);
   }, [sm]);
 
-  const handleShiftLeft = (e: any) => {
-    e.preventDefault();
+  const handleShiftLeft = () => {
     activeIndex > 0
       ? setActiveIndex(activeIndex - 1)
       : setActiveIndex(technologies.length - 1);
   };
 
-  const handleShiftRight = (e: any) => {
-    e.preventDefault();
+  const handleShiftRight = () => {
     activeIndex < technologies.length - 1
       ? setActiveIndex(activeIndex + 1)
       : setActiveIndex(0);
@@ -116,7 +114,7 @@ export default function Technologies() {
                 >
                   {technologies.map((tech, index) => (
                     <Technology
-                      key={`${tech} + ${index}`}
+                      key={`${tech.name} + ${index}`}
                       active={activeIndex === index}
                       tech={tech}
                       size={128}

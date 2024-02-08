@@ -1,6 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import Content from "./_components/content";
 import Footer from "./_components/footer";
 import PrimaryNav from "./_components/primary-nav";

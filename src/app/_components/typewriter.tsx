@@ -35,7 +35,7 @@ export default function Typewriter({ prompts }: { prompts: string[] }) {
       setTyping(true);
     }
 
-    let timeout: any;
+    let timeout: NodeJS.Timeout;
     if (typing) {
       if (textIndex < prompts[index].length) {
         timeout = setTimeout(addNextLetter, typingSpeed);

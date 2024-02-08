@@ -1,4 +1,3 @@
-import Image from "next/image";
 import GithubCalendar from "./_components/GithubCalendar";
 import Project from "./_components/project";
 

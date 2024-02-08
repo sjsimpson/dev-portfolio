@@ -1,5 +1,4 @@
-import { useMemo, useState } from "react";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
 import TopNavLink from "./top-nav-link";
 import { links } from "@/constants/nav-links";
 

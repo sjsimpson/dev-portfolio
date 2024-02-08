@@ -53,7 +53,7 @@ export default function SideNav({
           <div className={`relative flex flex-col gap-2 ${roboto.className}`}>
             {links.map((link, index) => (
               <SideNavLink
-                key={link + index.toString()}
+                key={link.name}
                 active={index === activeIndex}
                 href={link.href}
                 name={link.name}

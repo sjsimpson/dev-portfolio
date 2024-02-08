@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MouseEventHandler, useEffect, useRef } from "react";
+import { type MouseEventHandler, useEffect, useRef } from "react";
 
 import { ChevronDown } from "react-feather";
 

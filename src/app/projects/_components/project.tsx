@@ -1,7 +1,5 @@
 "use client";
-import Button from "@/app/_ui/button";
 import Image from "next/image";
-import { Globe } from "react-feather";
 
 export default function Project({
   name,

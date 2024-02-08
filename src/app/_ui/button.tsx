@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Roboto_Mono } from "next/font/google";
-import { MouseEventHandler } from "react";
+import type { MouseEventHandler } from "react";
 
 const roboto = Roboto_Mono({ subsets: ["latin"] });
 
@@ -12,7 +12,7 @@ export default function Button({
   image,
 }: {
   children: React.ReactNode;
-  onClick: MouseEventHandler;
+  onClick?: MouseEventHandler;
   image?: {
     src: string;
     alt: string;

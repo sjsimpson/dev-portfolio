@@ -13,9 +13,7 @@ export default function FooterButton({
 }) {
   return (
     <a href={href} target="_blank">
-      <Button image={{ src, alt: name }} onClick={() => {}}>
-        {name}
-      </Button>
+      <Button image={{ src, alt: name }}>{name}</Button>
     </a>
   );
 }

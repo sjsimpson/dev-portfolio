@@ -1,7 +1,5 @@
 import { roles } from "@/constants/roles";
-import { technologies } from "@/constants/technologies";
 import Role from "./_components/role";
-import Technology from "./_components/technology";
 import Technologies from "./_components/technologies";
 export default function Resume() {
   return (

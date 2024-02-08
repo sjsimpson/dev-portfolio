@@ -1,8 +1,5 @@
-import { useRef, MouseEventHandler, useEffect } from "react";
+import { useRef, type MouseEventHandler, useEffect } from "react";
 import Link from "next/link";
-import { Roboto_Mono } from "next/font/google";
-
-const roboto = Roboto_Mono({ subsets: ["latin"] });
 
 export default function SideNavLink({
   active,
