@@ -5,6 +5,7 @@ const hats = [
   "Software Developer",
   "Father",
   "Magic: The Gathering Player",
+  "Podcaster",
   "Psych Enjoyer",
   "Home Remodeler",
   "Colemak Enthusiast",
