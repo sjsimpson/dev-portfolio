@@ -5,6 +5,21 @@ export default function Projects() {
   return (
     <main className="flex flex-col items-center gap-16 w-4/5 lg:w-[800px]">
       <Project
+        name="The Commander Pod"
+        image={{ src: "/thecommanderpod.png", alt: "The Commander Pod" }}
+        url="https://thecommanderpod.com/"
+        github="https://github.com/sjsimpson/the-commander-pod"
+        description={
+          <>
+            <p className="mb-6">
+              This is the landing page for The Commander Pod podcast, which I
+              host with my friend. Honestly, it's not much of a project (and is
+              definitely not an app) but it was fun to work on.
+            </p>
+          </>
+        }
+      />
+      <Project
         name="Nacho Stocks"
         image={{ src: "/nachostocks.png", alt: "Nacho Stocks" }}
         url="https://nachostocks.com/"
