@@ -13,8 +13,8 @@ export default function Projects() {
           <>
             <p className="mb-6">
               This is the landing page for The Commander Pod podcast, which I
-              host with my friend. Honestly, it's not much of a project (and is
-              definitely not an app) but it was fun to work on.
+              host with my friend. Honestly, it&apos;s not much of a project
+              (and is definitely not an app) but it was fun to work on.
             </p>
           </>
         }
